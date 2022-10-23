@@ -1,0 +1,10 @@
+.cph
+a.out
+.vscode
+*.class
+output*
+input*
+.fleet
+main.cpp
+Unsolved
+Private
