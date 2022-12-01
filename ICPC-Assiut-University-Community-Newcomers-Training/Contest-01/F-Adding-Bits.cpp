@@ -11,8 +11,7 @@ int32_t main() {
     int a, b;
     cin >> a >> b;
 
-    int c = a ^ b;
-    cout << c << ed;
+    cout << (a ^ b) << ed;
 
     return 0;
 }
