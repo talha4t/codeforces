@@ -26,7 +26,7 @@ int32_t main() {
 
         }
 
-        if (yos)
+        if (yes)
             cout << "YES\n";
         else
             cout << "NO\n";
