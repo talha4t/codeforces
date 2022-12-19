@@ -16,10 +16,10 @@ int32_t main() {
         int a, b, c, d, tmp;
         cin >> a >> b >> c >> d;
 
-        int yos = 0;
+        int yes = 0;
         for (int i = 0; i < 4; i++) {
             if (a < b && c < d && a < c && b < d) {
-                yos = 1;
+                yes = 1;
                 break;
             }
             tmp = a, a = c, c = d, d = b, b = tmp;
