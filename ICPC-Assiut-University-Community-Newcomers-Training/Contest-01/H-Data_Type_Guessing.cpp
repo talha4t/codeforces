@@ -8,9 +8,18 @@ int32_t main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     
-    ll a = 10.124;
+    double n, k, a;
+    cin >> n >> k >> a;
 
-    cout << a << ed;
+    ll hold = (n * k) / a;
+    double res = (n * k) / a;
+
+    if (res - hold > 0)
+        cout << "double";
+    else if (hold <= 2147483647) 
+        cout << "int";
+    else if (res > 2147483647)
+        cout << "long long";
     
     return 0;
 }
