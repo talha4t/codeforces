@@ -26,8 +26,6 @@ int32_t main() {
 
         sort(v1.rbegin(), v1.rend());
 
-
-
         for (int i = 0; i < n; i++) {
             if (v[i] == v1[0])
                 cout << v1[0] - v1[1] << ' ';
