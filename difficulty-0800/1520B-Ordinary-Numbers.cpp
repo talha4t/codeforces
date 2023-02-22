@@ -10,7 +10,7 @@ bool solve() {
 
     int ct = 0;
     for (int i = 1; i <= 9; i++) {
-        ll x = 0;
+        ll x = 0;   
         for (int j = 1; j <= 10; j++) {
             x = x * 10 + i;
 
