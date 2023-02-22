@@ -6,21 +6,18 @@ using namespace std;
 
 bool solve() {
     
-    int n; cin >> n;
+    int a, b, c;
+    cin >> a >> b >> c;
 
-    int ct = 0;
-    for (int i = 1; i <= 9; i++) {
-        ll x = 0;  
-        for (int j = 1; j <= 10; j++) {
-            x = x * 10 + i;
-
-            if (x <= n)
-                ct++;
-        }
-    }
-
-    cout << ct << ed;
-
+    if (((2 * b - a) > 0) and  (2 * b - a) % c == 0)
+        cout << "YES" << ed;
+    else if (((2 * b - c) > 0) and (2 * b - c) % a == 0)
+        cout << "YES" << ed;
+    else if ((a + c) % (2 * b) == 0)
+        cout << "YES" << ed;
+    else 
+        cout << "NO" << ed;
+        
     return true;
 }
 
