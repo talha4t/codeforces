@@ -34,7 +34,8 @@ bool solve() {
         cout << 0 << ed;
     /* If fist ele. is minimum and last ele. is max then it will
        need minimum 1 one operation to sort. Or if first ele. is minimum
-       then its also need minium 1 operation to sort.
+       then its also need minium 1 operation to sort. or if last one is max
+       then the maximum operation is one.
     */        
     else if ((v[0] == mn and v[n - 1] == mx) or v[0] == mn or v[n - 1] == mx)
         cout << 1 << ed;
