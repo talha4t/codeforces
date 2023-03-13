@@ -8,11 +8,9 @@ using namespace std;
 bool solve() {
     int s, n; cin >> s >> n;
 
-    int x, y;
-
-    int tmp = s;
     vector<pair<int, int>> v(n);
     for (int i = 0; i < n; i++) {
+        int x, y;
         cin >> x >> y;
         
         v.push_back(make_pair(x, y));
@@ -20,7 +18,7 @@ bool solve() {
 
     sort(v.begin(), v.end());
 
-    int ct = 0;
+    int tmp = s, ct = 0;
     for (int i = n; i < v.size(); i++) {
         if (tmp > v[i].first) {
             ct++;
@@ -40,12 +38,7 @@ int32_t main() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    // int t;
-    // cin >> t;
-
-    // while(t--) {
-        solve();
-    // }
+    solve();
     
     return 0;
 }
