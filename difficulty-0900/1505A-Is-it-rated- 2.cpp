@@ -1,15 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#define ed '\n'
-
-int32_t main() {
-    ios_base::sync_with_stdio(false);
-    cin.tie(nullptr);
+int main() {
 
     string s; 
     while(getline(cin, s)) {
-        cout << "NO" << ed;
+        cout << "NO" << '\n';
     }
     
     return 0;
