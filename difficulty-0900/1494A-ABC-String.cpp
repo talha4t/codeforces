@@ -5,24 +5,34 @@ using namespace std;
 #define ll long long int 
 #define mod 1000000007
 
-bool isRegular(string s)
+bool isRegular(string expr)
 {
-    stack<char> st;
-    for (int i = 0; i < s.length(); i++) {
-        if (st.empty())
-            st.push(s[i]);
-
-        else if (st.top() == '(' and s[i] == ')')
-            st.pop();
-            
-        else
-            st.push(s[i]);
+    stack<char> s;
+    char x;
+ 
+    for (int i = 0; i < expr.length(); i++)
+    {
+        if (expr[i] == '(' )
+        {
+            s.push(expr[i]);
+            continue;
+        }
+ 
+        if (s.empty())
+            return false;
+ 
+        switch (expr[i])
+        {
+        case ')':
+ 
+            x = s.top();
+            s.pop();
+            if (x == '{' || x == '[')
+                return false;
+                break;
+        }
     }
-    
-    if (st.empty())
-        return true;
-
-    return false;
+    return (s.empty());
 }
 
 bool solve() {
@@ -37,34 +47,26 @@ bool solve() {
         cout << "NO" << ed;
     else {
         for (int i = 0; i < s.size(); i++) {
-            if (s[i] == a)
+            if (s[i] == a) {
                 s[i] = '(';
-            else if (s[i] == b)
-                s[i] = ')';
-            else 
-                s[i] = ')';
-        }
-        for (int i = 0; i < s1.size(); i++) {
-            if (s1[i] == a)
                 s1[i] = '(';
-            else if (s[i] == b)
+            }
+            else if (s[i] == b) {
+                s[i] = ')';
                 s1[i] = ')';
-            else 
+            }
+            else {
+                s[i] = ')';
                 s1[i] = '(';
-        }
+            }
 
+        }
         if (isRegular(s) or isRegular(s1))
             cout << "YES" << ed;
         else 
             cout << "NO" << ed;
     }
 
-    stack<char> st;
-    st.push('a');
-    st.push('b');
-    st.push('c');
-    st.pop();
-    cerr << st.top() << ed;
     return true;
 }
 
