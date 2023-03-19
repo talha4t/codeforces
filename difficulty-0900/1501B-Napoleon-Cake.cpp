@@ -16,12 +16,12 @@ bool solve() {
     vector<int> b(n, 0);
     reverse(a.begin(), a.end());
     int temp = a[0];
-    for (int i = 1; i < n; i++) {
+    for (int i = 0; i < n; i++) {
         if (temp != 0) 
-            b[i - 1] = 1;
+            b[i] = 1;
 
         temp--;
-        temp = max(temp, a[i]);
+        temp = max(temp, a[i + 1]);
     }
 
     reverse(b.begin(), b.end());
