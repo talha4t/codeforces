@@ -4,11 +4,6 @@ using namespace std;
 #define ed '\n'
 #define ll long long int 
 
-struct can {
-    int dur;
-    int pos;
-};
-
 bool solve() {
     
     int n; cin >> n;
