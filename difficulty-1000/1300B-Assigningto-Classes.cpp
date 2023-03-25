@@ -14,17 +14,11 @@ bool solve() {
 
     sort(v.begin(), v.end());
 
-    for (int i = 0; i < 2 * n; i++)
-        cerr << v[i] << ' ';
-
-    cerr << ed;
-    
     if (n == 1)
         cout << abs(v[0] - v[1]) << ed;
     else {
         int f = 2 * n / 2;
 
-        cerr << v[f]<< ed;
         cout << abs(v[f - 1] - v[f]) << ed;
     }
 
