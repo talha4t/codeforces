@@ -8,14 +8,15 @@ bool solve() {
     
     int n; cin >> n;
 
-    vector<int> v(2 * n);
-    for (int i = 0; i < 2 * n; i++)
-        cin >> v[i];
+    int t = n;
+    double sum = 0;
+    for (int i = 1; i <= n; i++) {
+        sum += (1.0 * 1 / t);
 
-    sort(v.begin(), v.end());
+        t -= 1;
+    }
 
-    cout << v[n] - v[n - 1] << ed;
-
+    cout << fixed << setprecision(12) << sum << ed;
     return true;
 }
 
@@ -23,12 +24,7 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int t;
-    cin >> t;
-
-    while(t--) {
-        solve();
-    }
+    solve();
     
     return 0;
 }
