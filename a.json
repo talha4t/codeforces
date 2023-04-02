@@ -1,0 +1,42 @@
+{
+    "[python]": {
+        
+        "editor.formatOnType": true
+    },
+    "editor.mouseWheelZoom": true,
+    "workbench.colorTheme": "Dracula",
+    "workbench.iconTheme": "eq-material-theme-icons",
+    "editor.fontFamily": "JetBrains Mono", // Font Family
+    "editor.fontLigatures": true,
+    "code-runner.runInTerminal": true,
+    "code-runner.saveAllFilesBeforeRun": true,
+    "editor.fontSize": 19,
+    "markdown.preview.fontSize": 18,
+    "debug.console.fontSize": 18,
+    "terminal.integrated.fontSize": 17,
+    "merge-conflict.autoNavigateNextConflict.enabled": true,
+    "editor.renderWhitespace": "all",
+    "explorer.confirmDelete": false,
+    "editor.accessibilitySupport": "off",
+    "code-runner.executorMap": {
+
+
+        "javascript": "node",
+        "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+        "c": "cd $dir && gcc $fileName && ./a.exe",
+        "cpp": "cd $dir && g++ $fileName && ./a.exe",
+
+    },
+    "editor.quickSuggestions": {
+        "comments": false,
+        "strings": false
+    },
+    "cSpell.userWords": [
+        "Mahmud",
+        "talha"
+    ],
+    "explorer.confirmDragAndDrop": false,
+    "json.schemas": [
+    
+    ],
+}
