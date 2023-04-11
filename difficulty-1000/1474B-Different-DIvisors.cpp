@@ -4,26 +4,37 @@ using namespace std;
 #define ed '\n'
 #define ll long long int 
 
-int n = 100000;
-vector<int> v;
+#define MAX 10000001
+bool is_not_prime2[MAX + 10];
+int n = MAX;
+vector<long long int> v;
 
-void sieveOfEratosthenes() {
-    vector<bool> isPrime(n + 1, true);
-
-    isPrime[0] = isPrime[1] = false;
-    for (int i = 2; i <= n; i += 2) {
-        if (isPrime[i] and (ll)i * i <= n) {
-            for (int j = i * i; j <= n; j += i)
-                isPrime[j] = false;
-        }
-    } 
-
-    for (int i = 0; i <= n; i++) {
-        if (isPrime[i])
+void sieveOfEratosthenes()
+{
+    int i, j;
+    is_not_prime2[1] = true;
+ 
+    v.push_back(2);
+    for (i = 4; i <= n; i += 2)
+        is_not_prime2[i] = true;
+ 
+    int root = sqrt(n);
+    for (i = 3; i <= n; i += 2)
+    {
+        if (is_not_prime2[i] == false)
+        {
             v.push_back(i);
+            if (i <= root)
+            {
+                for (j = i * i; j <= n; j += 2 * i)
+                {
+                    is_not_prime2[j] = true;
+                }
+            }
+        }
     }
+    // O(n * log log n)
 }
-
 bool solve() {
     
     int d; cin >> d;
