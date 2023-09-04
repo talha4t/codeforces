@@ -7,15 +7,17 @@ bool solve() {
     
     int n; cin >> n;
 
-    vector<int> v(n);
-    for (int i = 0; i < n; i++)
-        cin >> v[i];
-    
+    int first_val; cin >> first_val;
+
     int mn = INT_MAX;
-    for (int i = 1; i < n; i++)
-        mn = min(v[i], mn);
+    for (int i = 1; i < n; i++) {
+        int x; cin >> x;
+
+        mn = min(mn, x);
+    }
     
-    if (mn < v[0])
+    
+    if (mn < first_val)
         cout << "Alice\n";
     else
         cout << "Bob\n";
